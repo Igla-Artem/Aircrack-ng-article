@@ -1,38 +1,145 @@
-.App {
+body {
+  scroll-margin: auto;
+}
+
+#header{
+  width: 100%;
+  height: 120px;
+  background-image: linear-gradient(green, white, green);
+  background-color: white;
+  border-radius: 60px;
+  position: fixed;
+  top: 0;
+}
+
+.line {
+  position: relative;
+  top: 50%;  
+  color: green;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 180%;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Anonymous Pro', monospace;  
+  transform: translateY(-50%);    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes typewriter{
+  from{
+    width: 0;
+  }
+  to{
+    width: 35em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@keyframes blinkTextCursor{
+  from{
+    border-right-color: rgba(255,255,255,.75);
+  }
+  to{
+    border-right-color: transparent;
+  }
+}
+
+.logoHeader img {
+  position: fixed;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  
+  /* animation: rotateImage 3s infinite;
+  animation-timing-function: linear; */
+  
+}
+
+#sidebar {
+  width: 100%;
+  height: 900px;
+  margin-top: 150px;
+  background-color: green;
+  background-image: url(Kali.png);
+  background-size: 10%;
+  display: inline-block;
+  overflow-y: scroll;
+}
+
+#sidebar h1 {
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#sidebar h2{
+  text-align: left;
+  color: aliceblue;
 }
 
-@keyframes App-logo-spin {
-  from {
+#sidebar p{
+  font-size: 21px;
+  color: aliceblue;
+}
+
+#sidebar #comands {
+  text-indent: 21px;
+  color: white;
+  margin-left: 10px;
+  width: 1150px;
+  background-color:gray;
+  font-family: 'Anonymous Pro', monospace; 
+  border: 1px;
+}
+
+#sidebar img {
+  width: 820px;
+  height: 720px;
+  margin-left: 25%;
+}
+
+#sidebar ul, li {
+  color:white;
+  font-size: 21px;
+  font-family: 'Anonymous Pro', monospace; 
+}
+
+#sidebar hr {
+  font-size: 5px;
+  color: aliceblue;
+}
+
+#sidebar #comment {
+  text-align: left;
+}
+
+#footer {
+  margin-top: 50px;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  background-color: green;
+  margin-bottom: 30px;
+  border-radius: 0 0 30px 30px;
+}
+
+@keyframes rotateImage {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
